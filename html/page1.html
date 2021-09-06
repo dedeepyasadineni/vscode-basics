@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html><head>
+    <style>
+        form{
+            background-color: bisque;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            
+        }
+        h3{
+            font-style: italic;
+            color: rgb(112, 87, 112);
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-left: 30%;
+            
+        }
+        input{
+            margin: 10px;
+            
+        }
+        
+        a:link{
+            color: tomato;
+            text-decoration: none;
+        }
+        a:visited{
+            color: rgb(24, 146, 202);
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(230, 104, 104);
+            text-decoration: underline;
+        }
+        a:active{
+            background-color: lightblue;
+        }
+        li{
+          /*  display: inline; */
+            padding: 10px;
+            display: inline;
+            margin: 10px;
+        }
+        ul{
+            display: flex;
+            background-color: rgb(196, 184, 190) ;
+            margin-left: 10px;
+            list-style-type: none; /* to remove bullets*/
+            justify-content: space-between;
+        }
+        li:nth-child(4){
+            background-color: darkgrey;
+        }
+        label::before{
+            content: "*";
+        }
+        label{
+            display: inline-block;
+            text-align: right;
+            margin: 10px;
+            padding: 10px;
+            
+        }
+        input{
+            display: inline-block;
+            text-align: left;
+        }
+        
+    </style>
+    <title>Form</title>
+</head>
+<body>
+    <ul>
+       <li><a href="#">Home</a></li> 
+       <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Login</a></li>
+    </ul>
+
+
+    <h3>Form</h3>
+    <div>
+    <form method="GET" action="url">
+        <label>First Name : </label>
+        <input id="firstName" name="firstName" value="User" type="text" placeholder="Enter First Name" />
+        <br><label>Last Name : </label>
+        <input idpage="lastName" name="lastName" type="text" placeholder="Enter Last Name" /> 
+        <br><label>Email : </label>
+        <input type="email" placeholder="Enter email" /> 
+        <br><label>Mobile Number : </label>
+        <input type="number" placeholder="Enter mobile number" pattern="^[789][0-9]{9}" /> <br>
+        <label>Gender : 
+        Male
+        <input type="radio" name="gender" />
+        Female
+        <input type="radio" name="gender" />
+        </label><br>
+        <label>DOB : </label>
+        <input type="date" /><br>
+        <label>Password : </label>
+        <input type="password"/><br>
+        <label>Address : </label>
+        <textarea rows="3" cols="40"></textarea><br>
+        <label>Select Country</label>
+        <select name="country" size="1">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="australia">Australia</option>
+            <option value="japan" selected>Japan</option>
+            <option value="bangladesh">Bangladesh</option>
+            <option value="england">England</option>
+        </select><br>
+        <input type="checkbox"/>
+        <label id="imp">Select checkbox agreeing terms and conditions</label><br>
+        <input type="submit" value="save">
+    </form>
+    </div>
+</body>
+</html>

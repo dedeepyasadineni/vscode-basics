@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>Grid Demo</title>
+    <style>
+        .grid-container{
+            display: grid;
+            /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+            grid-template-columns: repeat(4,1fr);
+            /*grid-template-columns: repeat(2, 1fr 2fr);*/
+            grid-gap: 5px;
+            /*grid-template-rows: 200px;
+            grid-auto-rows: 300px;*/
+            grid-auto-rows: minmax(50px,auto);
+            grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "aside main main main"
+            "aside main main main"
+            "footer footer footer footer";
+        }
+        .grid-item{
+            background-color: lightsteelblue;
+        }
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        nav{
+            grid-area: nav;
+        }
+        footer{
+            grid-area: footer;
+        }
+        aside{
+            grid-area: aside;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="grid-item">Header
+            <p>
+
+            </p>
+        </header>
+        <nav class="grid-item">Nav</nav>
+        <aside class="grid-item">Aside</aside>
+        <main class="grid-item">Main</main>
+        <footer class="grid-item">Footer</footer>
+        
+    </div>
+</body>
